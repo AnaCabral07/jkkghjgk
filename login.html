@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F1FAF1;
+            font-family: "DM Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            background-color: #DBFEDD;
+            padding: 20px;
+        }
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .login {
+            text-align: center;
+            margin: auto;
+            background-color: #DBFEDD;
+            padding: 50px;
+            color: #0D7E2E;
+            width: 900px;
+
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        input {
+            padding: 20px;
+            font-size: 18px;
+            width: 90%;
+            margin-bottom: 10px;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 90%;
+            height: 40px;
+            cursor: pointer;
+            background-color: #2f5c2c;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #0D7E2E;
+        }
+        .footer {
+            background-color: #DBFEDD;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; 
+        }
+        .containerR {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: auto;
+            padding: 10px;
+        }
+        .footer-contactR, .footer-navigationR {
+            font-size: 14px;
+            color: #0D7E2E;
+        }
+        .footer-bottomR {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #0D7E2E;
+        }
+        .footer-bottomR a {
+            color: #0D7E2E;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" href="../Rodapé/rodape.css">
+    <link rel="stylesheet" href="../NavBar/navbar.css">
+    <link rel="icon" type="image/png" href="../../img/favicon.png">
+</head>
+<body>
+    <!--BARRA DE NAVEGAÇÃO-->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo">
+                <a href="pages/Cadastro de Users/login.html"><img class="image" src="../NavBar/imagens/sustentech_logo.png" alt="sustentech logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Início</a></li>
+                <li><a href="../Produtos/produtos.php">Produtos</a></li>
+                <li class="dropdown">
+                    <a href="#">Cadastro</a>
+                    <ul class="dropdown-content">
+                        <li><a href="../Cadastro de users/usuarios.html">Usuários</a></li>
+                        <li><a href="../Cadastro de users/usuarios_empresas.html">Empresas</a></li>
+                        <li><a href="../Cadastro Produtos/cadastro_produtos.html">Produtos</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Sobre Nós/sobre_nos.html">Sobre Nós</a></li>
+                <li><a href="../Locais de Descarte/locais_descarte.html">Locais de Descarte</a></li>
+                <li><a href="../Fale Conosco/fale_conosco.html">Fale Conosco</a></li>
+                <li><a href="../Sugestoes/sugestoes.html">Sugestões</a></li>
+            </ul>
+            <div class="perfil-iconN">
+                <a href="pages/Cadastro de Users/login.html"><img class="image" src="../NavBar/imagens/icone_perfil.png" alt="ícone perfil"></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Área de Login -->
+    <div class="login">
+        <h1>Entre na sua conta:</h1>
+        <form method="POST" action="login.php">
+            <input type="email" name="email" placeholder="Email:" required>
+            <input type="password" name="senha" placeholder="Senha:" required>
+            <button type="submit">Login</button>
+            <button onclick="location.href='enviar_email.html'" class="btn">Redefinir Senha</button>
+        </form>        
+    </div>
+
+</body>
+</html>
